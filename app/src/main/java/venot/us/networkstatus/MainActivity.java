@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     public String getWifiStatus() {
         SupplicantState supState;
-        WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
         WifiInfo wifiInfo = wifiManager.getConnectionInfo();
         supState = wifiInfo.getSupplicantState();
         return supState.toString();
